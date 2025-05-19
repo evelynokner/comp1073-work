@@ -39,7 +39,7 @@ let characterName = "Cloudy";
 // randomly generate age from range 1 to 100
 let age = Math.floor(Math.random() * 100) + 1;
 let isSuperhero = true;
-let specialPowers = ["jump up to space", "change the weather", "float objects with their mind"];
+let specialPowers = ["jump up to space", "change the weather", "float objects with their mind", "turn into any animal"];
 let favoriteFood = "meatballs";
 
 // testing random number generator
@@ -53,7 +53,15 @@ let increaseAgeButton = document.querySelector('#increaseAgeButton');
 let decreaseAgeButton = document.querySelector('#decreaseAgeButton');
 
 // Function to generate a random character description
-
+function generateDescription(){
+    // variable for randomly selecting a value from specialPowers array
+    let randomPower = specialPowers[Math.floor(Math.random()*specialPowers.length)];
+    // make string variable for character description text content
+    let descriptionString = 'This is ' + characterName + '! Their favourite food is'  + favoriteFood + ' and they can ' + randomPower;
+    characterDescription.textContent = descriptionString;
+}
+// testing character description to console
+console.log("This is " + characterName + "! Their favourite food is " + favoriteFood + " and they can " + specialPowers[Math.floor(Math.random()*specialPowers.length)]);
 
 // Functions to update character's age
 
