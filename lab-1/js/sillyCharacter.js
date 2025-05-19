@@ -45,6 +45,13 @@ let favoriteFood = "meatballs";
 // testing random number generator
 console.log(age);
 
+// variables for displaying text, user input, and buttons
+let characterDescription = document.querySelector('p#characterDescription');
+let changeNameField = document.querySelector('input#changeNameField');
+let generateButton = document.querySelector('#generateButton');
+let increaseAgeButton = document.querySelector('#increaseAgeButton');
+let decreaseAgeButton = document.querySelector('#decreaseAgeButton');
+
 // Function to generate a random character description
 
 
