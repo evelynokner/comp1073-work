@@ -57,14 +57,20 @@ function generateDescription(){
     // variable for randomly selecting a value from specialPowers array
     let randomPower = specialPowers[Math.floor(Math.random()*specialPowers.length)];
     // make string variable for character description text content
-    let descriptionString = 'This is ' + characterName + '! Their favourite food is'  + favoriteFood + ' and they can ' + randomPower;
+    let descriptionString = 'This is ' + age + ' years old ' + characterName + '! Their favourite food is'  + favoriteFood + ' and they can ' + randomPower;
     characterDescription.textContent = descriptionString;
 }
 // testing character description to console
-console.log("This is " + characterName + "! Their favourite food is " + favoriteFood + " and they can " + specialPowers[Math.floor(Math.random()*specialPowers.length)]);
+console.log("This is " + age + ' years old ' + characterName + "! Their favourite food is " + favoriteFood + " and they can " + specialPowers[Math.floor(Math.random()*specialPowers.length)]);
 
 // Functions to update character's age
+function increaseAge(){
+    
+}
 
+function decreaseAge(){
+
+}
 
 // Function to update the character's description after changing age
 
