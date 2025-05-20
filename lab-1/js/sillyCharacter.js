@@ -57,7 +57,7 @@ function generateCharacter(){
     // randomly generate age from range 1 to 100
     age = Math.floor(Math.random() * 100) + 1;
     // variable for randomly selecting a value from specialPowers array
-    randomPower = specialPowers[Math.floor(Math.random()*specialPowers.length)];
+    power = specialPowers[Math.floor(Math.random()*specialPowers.length)];
 }
 // testing character description to console
 console.log('This is' + age + ' years old ' + characterName + '! Their favourite food is ' + favoriteFood + ' and they can ' + specialPowers[Math.floor(Math.random()*specialPowers.length)]);
@@ -73,14 +73,23 @@ function decreaseAge(){
     updateDescription();
 }
 
+// generates character data and updates the description displayed on page
+function generateAndDisplayCharacter() {
+    generateCharacter();
+    updateDescription();
+}
+
 // Function to update the character's description after changing age
 function updateDescription(){
     // make string variable for character description text content
     descriptionString = 'This is ' + age + ' years old ' 
     + characterName + '! Their favourite food is '  
     + favoriteFood + ' and they can ' 
-    + randomPower;
+    + power;
     characterDescription.textContent = descriptionString;
 }
 
 // Add event listeners for buttons using querySelector
+generateButton.addEventListener('click', generateAndDisplayCharacter);
+increaseAgeButton.addEventListener('click', increaseAge);
+decreaseAgeButton.addEventListener('click', decreaseAge);
