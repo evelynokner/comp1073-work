@@ -73,6 +73,12 @@ function decreaseAge(){
     updateDescription();
 }
 
+// function to update the name from user's input in field
+function changeName(){
+    characterName = changeNameField.value;
+    updateDescription();
+}
+
 // generates character data and updates the description displayed on page
 function generateAndDisplayCharacter() {
     generateCharacter();
@@ -93,3 +99,8 @@ function updateDescription(){
 generateButton.addEventListener('click', generateAndDisplayCharacter);
 increaseAgeButton.addEventListener('click', increaseAge);
 decreaseAgeButton.addEventListener('click', decreaseAge);
+changeNameField.addEventListener('keypress', function (e){
+    if (e.key === "Enter"){
+        changeName();
+    }
+} );
