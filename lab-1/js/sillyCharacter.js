@@ -36,10 +36,10 @@ display the character's attributes in a creative and humorous way.
 
 // Declare and initialize variables
 let characterName = "Cloudy";
-// randomly generate age from range 1 to 100
-let age = Math.floor(Math.random() * 100) + 1;
+let age; // randomly generated age
 let isSuperhero = true;
 let specialPowers = ["jump up to space", "change the weather", "float objects with their mind", "turn into any animal"];
+let power; // randomly generated power
 let favoriteFood = "meatballs";
 
 // testing random number generator
@@ -53,27 +53,34 @@ let increaseAgeButton = document.querySelector('#increaseAgeButton');
 let decreaseAgeButton = document.querySelector('#decreaseAgeButton');
 
 // Function to generate a random character description
-function generateDescription(){
+function generateCharacter(){
+    // randomly generate age from range 1 to 100
+    age = Math.floor(Math.random() * 100) + 1;
     // variable for randomly selecting a value from specialPowers array
-    let randomPower = specialPowers[Math.floor(Math.random()*specialPowers.length)];
-    // make string variable for character description text content
-    let descriptionString = 'This is ' + age + ' years old ' + characterName + '! Their favourite food is'  + favoriteFood + ' and they can ' + randomPower;
-    characterDescription.textContent = descriptionString;
+    randomPower = specialPowers[Math.floor(Math.random()*specialPowers.length)];
 }
 // testing character description to console
-console.log("This is " + age + ' years old ' + characterName + "! Their favourite food is " + favoriteFood + " and they can " + specialPowers[Math.floor(Math.random()*specialPowers.length)]);
+console.log('This is' + age + ' years old ' + characterName + '! Their favourite food is ' + favoriteFood + ' and they can ' + specialPowers[Math.floor(Math.random()*specialPowers.length)]);
 
 // Functions to update character's age
 function increaseAge(){
-    
+    age++;
+    updateDescription();
 }
 
 function decreaseAge(){
-
+    age--;
+    updateDescription();
 }
 
 // Function to update the character's description after changing age
-
+function updateDescription(){
+    // make string variable for character description text content
+    descriptionString = 'This is ' + age + ' years old ' 
+    + characterName + '! Their favourite food is '  
+    + favoriteFood + ' and they can ' 
+    + randomPower;
+    characterDescription.textContent = descriptionString;
+}
 
 // Add event listeners for buttons using querySelector
-
