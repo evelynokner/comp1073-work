@@ -59,8 +59,6 @@ function generateCharacter(){
     // variable for randomly selecting a value from specialPowers array
     power = specialPowers[Math.floor(Math.random()*specialPowers.length)];
 }
-// testing character description to console
-console.log('This is' + age + ' years old ' + characterName + '! Their favourite food is ' + favoriteFood + ' and they can ' + specialPowers[Math.floor(Math.random()*specialPowers.length)]);
 
 // Functions to update character's age
 function increaseAge(){
@@ -99,6 +97,7 @@ function updateDescription(){
 generateButton.addEventListener('click', generateAndDisplayCharacter);
 increaseAgeButton.addEventListener('click', increaseAge);
 decreaseAgeButton.addEventListener('click', decreaseAge);
+// allow user to change character name by pressing the enter key after typing in the input field
 changeNameField.addEventListener('keypress', function (e){
     if (e.key === "Enter"){
         changeName();
