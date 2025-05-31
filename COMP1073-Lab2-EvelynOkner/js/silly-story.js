@@ -50,7 +50,12 @@ function result() {
 	- xItem, yItem, and zItem
 	Call up the function and for each variable, pass it the array from which to grab a random string 
 	- for example if insertW was an array of strings, I would type:
-	var wItem = randomValueFromArray(insertW);
+	var wItem = randomValueFromArray(insertW); */
+	var xItem = randomValueFromArray(insertX);
+	var yItem = randomValueFromArray(insertY);
+	var zItem = randomValueFromArray(insertZ);
+	// testing
+	console.log(xItem + ', ' + yItem + ', ' + zItem);
 
 	/* STEP 9: Replace the three placeholders in the newStory string — :insertx:, :inserty:, and :insertz: 
 	— with the strings stored in xItem, yItem, and zItem. Each time, be sure to update the 
