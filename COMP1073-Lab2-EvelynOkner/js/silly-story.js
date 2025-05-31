@@ -44,6 +44,7 @@ function randomValueFromArray(array){
 function result() {
 	/* STEP 7: Create a new variable called newStory and set it to the value of storyText - 
 	we don't want to overwrite the original story! */
+	var newStory = storyText;
 
 	/* STEP 8: Use the randomValueFromArray() function to generate a value for each of three new variables 
 	- xItem, yItem, and zItem
