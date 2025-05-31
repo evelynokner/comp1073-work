@@ -6,10 +6,13 @@ Declare and initialize variables
 - randomize for the button
 - story for the paragraph that outputs the final story
 */
+let customName = document.querySelector('#customname');
+let randomize = document.querySelector('.randomize');
+let story = document.querySelector('.story');
 
 /* STEP 3: 
 Create the variable that contains the story string that will be modified - 
-use var storyText to containt the following:
+use var storyText to contain the following:
 'It was 94 farenheit outside, so :insertx: went for a walk. 
 When they got to :inserty:, they stared in horror for a few moments, then :insertz:. 
 Bob saw the whole thing, but he was not surprised — :insertx: weighs 300 pounds, and it was a hot day.'
@@ -33,8 +36,8 @@ function randomValueFromArray(array){
 
 /* STEP 6: Review the partially complete result() function below */
 function result() {
-	/* STEP 7: Create a new variable called newStory and set it to the value of storyText -
-	 we don't want to overwrite the original story! */
+	/* STEP 7: Create a new variable called newStory and set it to the value of storyText - 
+	we don't want to overwrite the original story! */
 
 	/* STEP 8: Use the randomValueFromArray() function to generate a value for each of three new variables 
 	- xItem, yItem, and zItem
@@ -76,5 +79,3 @@ it represents is clicked, the result() function is run. */
 
 
 // This lab based on the excellent assessment challenge at https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator
-
-
