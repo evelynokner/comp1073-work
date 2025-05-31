@@ -27,6 +27,9 @@ Create three arrays, insertX, insertY, and insertZ, assigning them the following
 - Area 51, Death Valley, Aruba
 - spontaneously combusted, rapidly sublimated, evaporated instantly
 */
+let insertX = ['Donald Trump', 'Jackie Chan', 'Santa Claus'];
+let insertY = ['Area 51', 'Death Valley', 'Aruba'];
+let insertZ = ['spontaneously combusted', 'rapidly sublimated', 'evaporated instantly'];
 
 // FUNCTIONS
 
