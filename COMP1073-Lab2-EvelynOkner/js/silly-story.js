@@ -17,7 +17,7 @@ use var storyText to contain the following:
 When they got to :inserty:, they stared in horror for a few moments, then :insertz:. 
 Bob saw the whole thing, but he was not surprised — :insertx: weighs 300 pounds, and it was a hot day.'
 */
-var storyText = 'It was 94 farenheit outside, so :insertx: went for a walk. ' + 
+var storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. ' + 
 'When they got to :inserty:, they stared in horror for a few moments, then :insertz:. ' + 
 'Bob saw the whole thing, but he was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
 
@@ -80,9 +80,9 @@ function result() {
 		
 		/* STEP 12a: Create a variable called temp and convert °F to °C ... 
 		the formula for conversion is °C = (°F - 32) x 5/9 */
-		var temp = (94 - 32) * 5/9;
+		var temp = (94 - 32) * 5/9 + ' celsius';
 		// STEP 12b: Replace the string '94 fahrenheit' with the updated temperature in °C
-		
+		newStory = newStory.replace('94 fahrenheit', temp);
   	}
 	// testing
 	console.log(newStory);
