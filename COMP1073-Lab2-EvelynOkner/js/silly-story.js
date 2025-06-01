@@ -17,8 +17,8 @@ use var storyText to contain the following:
 When they got to :inserty:, they stared in horror for a few moments, then :insertz:. 
 Bob saw the whole thing, but he was not surprised — :insertx: weighs 300 pounds, and it was a hot day.'
 */
-var storyText = 'It was 94 farenheit outside, so :insertx: went for a walk.' + 
-'When they got to :inserty:, they stared in horror for a few moments, then :insertz:.' + 
+var storyText = 'It was 94 farenheit outside, so :insertx: went for a walk. ' + 
+'When they got to :inserty:, they stared in horror for a few moments, then :insertz:. ' + 
 'Bob saw the whole thing, but he was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
 
 /* STEP 4: 
@@ -60,11 +60,17 @@ function result() {
 	/* STEP 9: Replace the three placeholders in the newStory string — :insertx:, :inserty:, and :insertz: 
 	— with the strings stored in xItem, yItem, and zItem. Each time, be sure to update the 
 	variable newStory (with +=). You might need to do one of the above replacements twice! */
+	newStory = newStory.replace(':insertx:', xItem);
+	newStory = newStory.replace(':inserty:', yItem);
+	newStory = newStory.replace(':insertz:', zItem);
+	newStory = newStory.replace(':insertx:', xItem);
+	// testing
+	console.log(newStory);
 
 	/* STEP 10: If the user has typed a name in the customName field, 
 	replace the name 'Bob' in the story with whatever they typed */
 	if(customName.value != '') {
-
+		
 	}
 	/* STEP 11: If the metric radio button has been checked, we need to convert the temperature 
 	and mass numbers in the story */
