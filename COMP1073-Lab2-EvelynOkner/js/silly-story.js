@@ -6,7 +6,7 @@ Declare and initialize variables
 - randomize for the button
 - story for the paragraph that outputs the final story
 */
-let customName = document.querySelector('#customname');
+let customName = document.querySelector('#customName');
 let randomize = document.querySelector('.randomize');
 let story = document.querySelector('.story');
 
