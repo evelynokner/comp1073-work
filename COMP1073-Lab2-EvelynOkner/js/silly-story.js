@@ -76,7 +76,7 @@ function result() {
 	and mass numbers in the story */
   	if(document.getElementById("metric").checked) {
 		// STEP 11a: Create a variable called weight and convert the 300lbs to kgs (1lb = 0.453592kg)
-		
+		var weight = 300 * 0.453592;
 		// STEP 11b: Replace the string 300 pounds with the updated weight in kg
 
 		/* STEP 12a: Create a variable called temp and convert °F to °C ... 
