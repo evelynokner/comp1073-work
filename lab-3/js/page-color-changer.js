@@ -17,3 +17,13 @@ function changeBackgroundColor(){
     // testing to check slider values
     console.log(`${redValue}, ${greenValue}, ${blueValue}`);
 }
+
+// event handlers to execute changeBackgroundColor function when sliders are moved
+redSlider.onchange = changeBackgroundColor;
+greenSlider.onchange = changeBackgroundColor;
+blueSlider.onchange = changeBackgroundColor;
+
+// can also use event listeners instead:
+// redSlider.addEventListener('change', changeBackgroundColor);
+// greenSlider.addEventListener('change', changeBackgroundColor);
+// blueSlider.addEventListener('change', changeBackgroundColor);
