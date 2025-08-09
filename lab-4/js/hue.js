@@ -48,13 +48,25 @@ let method = "";
 // STEP 7e: Build out the URL for the RESTful call to the API, combining the bridge URL, user, and lightNum - building out the correct path in the format http://192.168.0.0/api/[username]/lights/[lightNum]/state
 
 const html = document.querySelector('html');
-const hueSlider = document.getElementById("hue");
+const hueSlider = document.getElementById('hue');
+// lab 4 - add button to turn light on or off
+const toggleButton = document.getElementById('toggleButton');
+
+var lightIsOn = true;
+// button event listener
+toggleButton.addEventListener('click', function(){
+	lightIsOn = !lightIsOn;
+	console.log(lightIsOn);
+});
 
 // STEP 9a: Examine the below event listener for the range slider
 hueSlider.addEventListener("change", function() {
 	var newHue = this.value * 1000;
-	updateScreenColor(newHue);
-	var commands = '{ "hue" : ' + newHue + ', "sat" : 254, "bri" : 254, "on" : true }';
+	// only allow screen color to update if button was toggled to turn light off
+	if (lightIsOn){
+		updateScreenColor(newHue);
+	}
+	//var commands = '{ "hue" : ' + newHue + ', "sat" : 254, "bri" : 254, "on" : true }';
 	// STEP 9b: Invoke the completed updateLight() function when the hueSlider value changes
 	
 }, false);
