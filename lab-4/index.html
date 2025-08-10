@@ -10,5 +10,13 @@
 		<h1>Philips Hue Lab</h1>
 		<button id="toggleButton">Toggle Light</button>
 		<input type="range" id="hue" min="0" max="47" />
+		<!-- send form to API link -->
+		<form action="http://192.168.1.41/debug/clip.html" method="put">
+  			<label for="brightness">Brightness</label>
+			<input type="range" id="brightness" min="0" max="255"/>
+			<label for="saturation">Saturation</label>
+			<input type="range" id="saturation" min="0" max="255"/>
+			<input type="submit" value="Submit">
+		</form>
 	</body>
 </html>

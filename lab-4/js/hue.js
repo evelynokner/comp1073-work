@@ -38,13 +38,13 @@ STEP 6: Try changing some of the JSON object values (saturation and brightness r
 // STEP 7: Open this file in a browser tab, then come back to this script and configure it to work for your particular light
 
 // STEP 7a: Add the URL for the bridge
-const bridge = "";
+const bridge = "http://192.168.1.41";
 // STEP 7b: Add a constant for your specific username
 const user = "";
 // STEP 7c: Add another constant for your light number
 const lightNum = "";
 // STEP 7d: Just like the debugger app that runs on the bridge, we need to choose a method to use to interact with the API - use 'put'
-let method = "";
+let method = "PUT";
 // STEP 7e: Build out the URL for the RESTful call to the API, combining the bridge URL, user, and lightNum - building out the correct path in the format http://192.168.0.0/api/[username]/lights/[lightNum]/state
 
 const html = document.querySelector('html');
@@ -57,6 +57,10 @@ var lightIsOn = true;
 toggleButton.addEventListener('click', function(){
 	lightIsOn = !lightIsOn;
 	console.log(lightIsOn);
+	// turn off page color
+	if (!lightIsOn){
+		html.style.backgroundColor = 'white';
+	}
 });
 
 // STEP 9a: Examine the below event listener for the range slider
@@ -68,7 +72,7 @@ hueSlider.addEventListener("change", function() {
 	}
 	//var commands = '{ "hue" : ' + newHue + ', "sat" : 254, "bri" : 254, "on" : true }';
 	// STEP 9b: Invoke the completed updateLight() function when the hueSlider value changes
-	
+	//updateLight(commands);
 }, false);
 
 // Function that changes the page color based on the value of the slider
@@ -80,10 +84,16 @@ function updateScreenColor(newHue){
 }
 
 // STEP 8: Function to update the hue light by passing JSON to the bridge
-
+function updateLight(bodyData){
 	// STEP 8a: Use the fetch() method
-	
+	fetch(endpoint, {
+		method: method,
+		body: bodyData
+	})
 	// STEP 8b: Chain .then after the fetch(), and collect the response from the server (bridge)
-	
+	.then(response => response.json())   // STEP 8b: Parse the response to JSON
+	.then(data => console.log("Bridge Response:", data)) // Log response for confirmation
+	.catch(error => console.error("Error:", error));   // Log any network/API errors
+}
 
 // STEP 10: Look up the Philips Hue API to learn about other ways to work with the Hue lighting products - I hope you had fun!
