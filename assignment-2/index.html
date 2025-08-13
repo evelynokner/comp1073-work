@@ -11,10 +11,9 @@
 </head>
 <body>
     <h1>Order a Smoothie</h1>
-    <form>
+    <form action="">
         <!-- radio buttons for cup size (user can only select 1) -->
-        <label>Select Size: </label>
-        
+        <h4>Select Size: </h4>
         <input type="radio" name="size" id="small" value="small">
         <label for="small">Small</label>
         
@@ -24,39 +23,54 @@
         <input type="radio" name="size" id="large" value="large">
         <label for="large">Large</label>
 
-        <!-- smoothie ingredients: fruits & berries -->
-        <h3>Ingredients</h3>
-        <label>Select Fruits: </label>
+        <!-- radio buttons to pick liquid -->
+        <h4>Select a Liquid: </h4>
+        <!-- milk, coconut water, fruit juice -->
+        <input type="radio" name="liquid" id="milk" value="milk">
+        <label for="milk">Milk</label>
+        
+        <input type="radio" name="liquid" id="coconutWater" value="coconutWater">
+        <label for="coconutWater">Coconut Water</label>
+        
+        <input type="radio" name="liquid" id="fruitJuice" value="fruitJuice">
+        <label for="fruitJuice">Fruit Juice</label>
 
-        <input type="checkbox" name="banana" id="banana">
+        <!-- checkboxes for smoothie ingredients -->
+        <h2>Ingredients</h2>
+        <h4>Select Fruits: </h4>
+        <input type="checkbox" name="banana" id="banana" value="banana">
         <label for="banana">Banana</label>
 
-        <input type="checkbox" name="banana" id="banana">
-        <label for="banana">Pineapple</label>
+        <input type="checkbox" name="pineapple" id="pineapple" value="pineapple">
+        <label for="pineapple">Pineapple</label>
 
-        <input type="checkbox" name="mango" id="mango">
-        <label for="banana">Mango</label>
+        <input type="checkbox" name="mango" id="mango" value="mango">
+        <label for="mango">Mango</label>
 
-        <input type="checkbox" name="kiwi" id="kiwi">
+        <input type="checkbox" name="kiwi" id="kiwi" value="kiwi">
         <label for="kiwi">Kiwi</label>
 
-        <input type="checkbox" name="orange" id="orange">
-        <label for="orange">Orange</label>
-        
-        <br>
+        <input type="checkbox" name="orange" id="orange" value="orange">
+        <label for="orange">Orange</label><br>
 
-        <label>Select Berries: </label>
-
-        <input type="checkbox" name="blueberry" id="blueberry">
+        <h4>Select Berries: </h4>
+        <input type="checkbox" name="blueberry" id="blueberry" value="blueberry">
         <label for="blueberry">Blueberry</label>
 
-        <input type="checkbox" name="strawberry" id="strawberry">
+        <input type="checkbox" name="strawberry" id="strawberry" value="strawberry">
         <label for="strawberry">Strawberry</label>
 
-        <input type="checkbox" name="raspberry" id="raspberry">
+        <input type="checkbox" name="raspberry" id="raspberry" value="raspberry">
         <label for="raspberry">Raspberry</label>
 
-        <input type="checkbox" name="blackberry" id="blackberry">
-        <label for="blackberry">Blackberry</label>
+        <input type="checkbox" name="blackberry" id="blackberry" value="blackberry">
+        <label for="blackberry">Blackberry</label><br>
+
+        <!-- additional toppings -->
+        <!-- coconut flakes, nuts, honey, chia seeds -->
+
+        <input type="submit" value="Submit Order"></button>
+
+        <p id="orderOutput"></p>
     </form>
 </body>
