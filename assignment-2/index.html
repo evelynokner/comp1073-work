@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1>Order a Smoothie</h1>
-    <form action="">
+    <form>
         <!-- radio buttons for cup size (user can only select 1) -->
         <h4>Select Size: </h4>
         <input type="radio" name="size" id="small" value="small">
@@ -29,10 +29,10 @@
         <input type="radio" name="liquid" id="milk" value="milk">
         <label for="milk">Milk</label>
         
-        <input type="radio" name="liquid" id="coconutWater" value="coconutWater">
+        <input type="radio" name="liquid" id="coconutWater" value="coconut water">
         <label for="coconutWater">Coconut Water</label>
         
-        <input type="radio" name="liquid" id="fruitJuice" value="fruitJuice">
+        <input type="radio" name="liquid" id="fruitJuice" value="fruit juice">
         <label for="fruitJuice">Fruit Juice</label>
 
         <!-- checkboxes for smoothie ingredients -->
@@ -68,9 +68,7 @@
 
         <!-- additional toppings -->
         <!-- coconut flakes, nuts, honey, chia seeds -->
-
-        <input type="submit" value="Submit Order"></button>
-
-        <p id="orderOutput"></p>
     </form>
+    <button id="submitBtn">Submit Order</button>
+    <p id="orderOutput"></p>
 </body>
