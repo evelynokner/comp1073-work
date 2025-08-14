@@ -1,0 +1,16 @@
+html{
+    text-align: center;
+}
+button{
+    margin: 15px;
+    width: 280px;
+    height: 80px;
+    border: 2px black solid;
+    border-radius: 12px;
+    background-color: pink;
+    font-size: 22px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(255, 207, 216);
+}

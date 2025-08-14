@@ -28,6 +28,6 @@ function getCatImage(){
     });
 }
 
-// get cat image when button is clicked
+// get cat image when button is clicked (there is some delay for displaying the image)
 const button = document.querySelector('button');
 button.addEventListener('click', getCatImage);
