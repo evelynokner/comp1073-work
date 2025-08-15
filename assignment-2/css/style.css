@@ -8,17 +8,43 @@ h1,h2,h3,h4,h5,h6,p,label,input,button{
 h1{
     font-size: 40px;
 }
-h4{
-    font-size: 20px;
+h3{
+    text-decoration: underline;
+    font-size: 24px;
 }
+label, div p{
+    font-size: 21px;
+}
+form div{
+    width: 36%;
+    margin: auto; /* center form */
+    border: 3px black dotted;
+    border-radius: 15px;
+    background-color: rgb(255, 252, 241);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+}
+/* change appearance of div where order is displayed */
+#output{
+    width: 40%;
+    margin: auto; /* center div and text */
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color:rgb(255, 231, 144);
+    padding: 10px;
+}
+/* change button size and colour */
 button{
     width: 150px;
     height: 50px;
-    background-color: aquamarine;
+    background-color: rgb(151, 255, 220);
     border-radius: 6px;
     font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 button:hover{
-    background-color:rgb(164, 250, 222) ;
+    background-color:rgb(173, 252, 226) ;
     cursor: pointer;
 }

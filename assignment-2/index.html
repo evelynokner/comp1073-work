@@ -12,8 +12,9 @@
 <body>
     <h1>Order a Smoothie</h1>
     <form>
+        <div>
         <!-- radio buttons for cup size (user can only select 1) -->
-        <h4>Select Size: </h4>
+        <h3>Select Size:</h3>
         <input type="radio" name="size" id="small" value="small">
         <label for="small">Small</label>
         
@@ -24,7 +25,7 @@
         <label for="large">Large</label>
 
         <!-- radio buttons to pick liquid -->
-        <h4>Select a Liquid: </h4>
+        <h3>Select a Liquid:</h3>
         <!-- milk, coconut water, fruit juice -->
         <input type="radio" name="liquid" id="milk" value="milk">
         <label for="milk">Milk</label>
@@ -36,8 +37,7 @@
         <label for="fruitJuice">Fruit Juice</label>
 
         <!-- checkboxes for smoothie ingredients -->
-        <h2>Ingredients</h2>
-        <h4>Select Fruits: </h4>
+        <h3>Select Fruits:</h3>
         <input type="checkbox" name="banana" id="banana" value="banana">
         <label for="banana">Banana</label>
 
@@ -53,7 +53,7 @@
         <input type="checkbox" name="orange" id="orange" value="orange">
         <label for="orange">Orange</label><br>
 
-        <h4>Select Berries: </h4>
+        <h3>Select Berries:</h3>
         <input type="checkbox" name="blueberry" id="blueberry" value="blueberry">
         <label for="blueberry">Blueberry</label>
 
@@ -66,9 +66,12 @@
         <input type="checkbox" name="blackberry" id="blackberry" value="blackberry">
         <label for="blackberry">Blackberry</label><br>
 
-        <!-- additional toppings -->
-        <!-- coconut flakes, nuts, honey, chia seeds -->
+        <!-- TODO: add additional toppings -->
+        <!-- e.g. coconut flakes, nuts, honey, chia seeds -->
+        </div>
     </form>
     <button id="submitBtn">Submit Order</button>
-    <p id="orderOutput"></p>
+    <div id="output">
+        <p id="orderOutput">Your order will be displayed here</p>
+    </div>
 </body>

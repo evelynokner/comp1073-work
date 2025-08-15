@@ -1,6 +1,9 @@
 html{
     text-align: center;
 }
+h1,h2,h3,h4,h5,h6,p,input,button{
+    font-family: Arial, sans-serif;
+}
 button{
     margin: 15px;
     width: 280px;
@@ -13,4 +16,7 @@ button{
 button:hover{
     cursor: pointer;
     background-color: rgb(255, 207, 216);
+}
+p{
+    font-size: 21px;
 }
